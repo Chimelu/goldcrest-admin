@@ -22,8 +22,9 @@ export default function SupportPage() {
           <p className="publicEyebrow">Help center</p>
           <h1 className="publicTitle">How can we help?</h1>
           <p className="publicLead">
-            Find answers about trading, your wallet, withdrawals, and account security. If something is not
-            covered here, reach out and we will get back to you.
+            Goldcrest helps you follow the market: live crypto prices, charts, and news. It is not a trading or
+            brokerage app. If something looks wrong or you need help with your account, reach out and we will
+            get back to you.
           </p>
         </section>
 
@@ -32,7 +33,7 @@ export default function SupportPage() {
             <h2 className="publicCardTitle">Contact us</h2>
             <p className="publicCardText">
               For account-specific issues, include your registered email and a short description of the
-              problem.
+              problem (for example: price not updating, chart not loading, or sign-in trouble).
             </p>
             <a className="publicLink" href="mailto:support@goldcrest.app">
               support@goldcrest.app
@@ -41,20 +42,20 @@ export default function SupportPage() {
           </article>
 
           <article className="publicCard">
-            <h2 className="publicCardTitle">Trading &amp; balances</h2>
+            <h2 className="publicCardTitle">Prices &amp; charts</h2>
             <ul className="publicList">
-              <li>Buy and sell execute at live market prices at the time of the request.</li>
-              <li>USD balance and crypto holdings sync with your in-app wallet after each trade.</li>
-              <li>If a feature is disabled for your account, an administrator must enable it.</li>
+              <li>Prices and chart data come from third-party market data providers and may be delayed.</li>
+              <li>Pull to refresh or reopen the app if a quote has not updated recently.</li>
+              <li>Display issues (wrong asset, blank chart) are often fixed after an app update—contact us if they persist.</li>
             </ul>
           </article>
 
           <article className="publicCard">
-            <h2 className="publicCardTitle">Withdrawals</h2>
+            <h2 className="publicCardTitle">News</h2>
             <ul className="publicList">
-              <li>Withdrawal requests are reviewed by our team.</li>
-              <li>Keep your destination address and network accurate; incorrect details may delay processing.</li>
-              <li>You can track request status from the wallet screen in the mobile app.</li>
+              <li>News headlines and summaries are for information only, not financial advice.</li>
+              <li>We do not endorse any token, project, or outlet mentioned in the feed.</li>
+              <li>Report broken links or misleading summaries so we can review the source.</li>
             </ul>
           </article>
 

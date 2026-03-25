@@ -25,7 +25,7 @@ export default function DeleteAccountPage() {
           <p className="publicEyebrow">Account</p>
           <h1 className="publicTitle">Delete your Goldcrest account</h1>
           <p className="publicLead">
-            Account deletion is permanent. This page explains what happens to your data and balances so you can
+            Account deletion is permanent. This page explains what happens to your data and app access so you can
             decide before you contact us.
           </p>
         </section>
@@ -33,8 +33,8 @@ export default function DeleteAccountPage() {
         <section className="publicAlert">
           <strong className="publicAlertTitle">Before you continue</strong>
           <p className="publicAlertText">
-            Complete or cancel any pending withdrawals. Consider selling crypto back to USD if you need funds
-            in your bank or external wallet, according to your available features.
+            Goldcrest is for market data and news only—not trading. If you use saved preferences or watchlists,
+            note anything you want to keep outside the app; deleting your account removes that tied-to-you data.
           </p>
         </section>
 
@@ -43,7 +43,7 @@ export default function DeleteAccountPage() {
             <h2 className="publicCardTitle">What we remove</h2>
             <ul className="publicList">
               <li>Your profile and login credentials.</li>
-              <li>Access to trading, wallet, and transaction history in the app.</li>
+              <li>Access to price feeds, charts, news, and any preferences stored with your account.</li>
               <li>Association between your email and this Goldcrest account.</li>
             </ul>
           </article>
