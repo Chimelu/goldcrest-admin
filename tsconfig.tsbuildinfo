@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/vite-env.d.ts","./src/pages/transactionspage.tsx","./src/pages/userspage.tsx","./src/pages/withdrawalspage.tsx"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/vite-env.d.ts","./src/layouts/adminlayout.tsx","./src/pages/deleteaccountpage.tsx","./src/pages/supportpage.tsx","./src/pages/transactionspage.tsx","./src/pages/userspage.tsx","./src/pages/withdrawalspage.tsx"],"version":"5.9.3"}

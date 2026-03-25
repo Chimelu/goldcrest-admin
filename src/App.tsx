@@ -1,48 +1,24 @@
-import { useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import AdminLayout from './layouts/AdminLayout';
 import UsersPage from './pages/UsersPage';
 import TransactionsPage from './pages/TransactionsPage';
 import WithdrawalsPage from './pages/WithdrawalsPage';
+import SupportPage from './pages/SupportPage';
+import DeleteAccountPage from './pages/DeleteAccountPage';
 import './App.css';
 
-type Page = 'users' | 'transactions' | 'withdrawals';
-
 export default function App() {
-  const [page, setPage] = useState<Page>('users');
-
   return (
-    <div className="layout">
-      <aside className="sidebar">
-        <div className="brand">Goldcrest</div>
-        <nav className="nav">
-          <button
-            type="button"
-            className={`navItem ${page === 'users' ? 'active' : ''}`}
-            onClick={() => setPage('users')}
-          >
-            Users
-          </button>
-          <button
-            type="button"
-            className={`navItem ${page === 'transactions' ? 'active' : ''}`}
-            onClick={() => setPage('transactions')}
-          >
-            Transactions
-          </button>
-          <button
-            type="button"
-            className={`navItem ${page === 'withdrawals' ? 'active' : ''}`}
-            onClick={() => setPage('withdrawals')}
-          >
-            Withdrawals
-          </button>
-        </nav>
-        <p className="sidebarHint">No auth — add before production.</p>
-      </aside>
-      <main className="main">
-        {page === 'users' ? <UsersPage /> : null}
-        {page === 'transactions' ? <TransactionsPage /> : null}
-        {page === 'withdrawals' ? <WithdrawalsPage /> : null}
-      </main>
-    </div>
+    <Routes>
+      <Route element={<AdminLayout />}>
+        <Route path="/" element={<Navigate to="/users" replace />} />
+        <Route path="/users" element={<UsersPage />} />
+        <Route path="/transactions" element={<TransactionsPage />} />
+        <Route path="/withdrawals" element={<WithdrawalsPage />} />
+      </Route>
+      <Route path="/support" element={<SupportPage />} />
+      <Route path="/delete-account" element={<DeleteAccountPage />} />
+      <Route path="*" element={<Navigate to="/users" replace />} />
+    </Routes>
   );
 }

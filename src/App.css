@@ -75,6 +75,30 @@ body {
   line-height: 1.4;
 }
 
+.sidebarFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.navItemSecondary {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #64748b;
+}
+
+.navItemSecondary:hover {
+  color: #94a3b8;
+}
+
+.navItemSecondary.active {
+  background: rgba(148, 163, 184, 0.08);
+  color: #cbd5e1;
+}
+
 .main {
   flex: 1;
   padding: 24px;
@@ -325,5 +349,318 @@ body {
   .input-wide {
     min-width: 120px;
     max-width: 150px;
+  }
+}
+
+/* Standalone public pages: /support, /delete-account */
+.publicPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245, 196, 81, 0.12), transparent 55%),
+    #0f172a;
+}
+
+.publicTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.7);
+  background: rgba(2, 6, 23, 0.65);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.publicBrand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #f5c451;
+  text-decoration: none;
+}
+
+.publicBrand:hover {
+  color: #fcd34d;
+}
+
+.publicTopNav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.publicTopLink {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.publicTopLink:hover {
+  background: rgba(30, 41, 59, 0.8);
+  color: #e2e8f0;
+}
+
+.publicTopLink.active {
+  background: rgba(245, 196, 81, 0.12);
+  color: #f5c451;
+  font-weight: 600;
+}
+
+.publicInner {
+  flex: 1;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.publicHero {
+  margin-bottom: 28px;
+}
+
+.publicEyebrow {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f5c451;
+}
+
+.publicTitle {
+  margin: 0 0 12px;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.2;
+}
+
+.publicLead {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  max-width: 640px;
+}
+
+.publicGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.publicGrid.singleColumn {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+}
+
+.publicCard {
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(51, 65, 85, 0.85);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.publicCardTitle {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: #f1f5f9;
+}
+
+.publicCardText {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #94a3b8;
+}
+
+.publicCardMeta {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.publicList {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.publicList li + li {
+  margin-top: 8px;
+}
+
+.publicOrderedList {
+  margin: 0 0 12px;
+  padding-left: 1.15rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.publicOrderedList li + li {
+  margin-top: 8px;
+}
+
+.publicLink {
+  display: inline-block;
+  margin-top: 4px;
+  font-weight: 600;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.publicLink:hover {
+  text-decoration: underline;
+}
+
+.publicBand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+  padding: 20px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(245, 196, 81, 0.25);
+  background: rgba(245, 196, 81, 0.06);
+}
+
+.publicBandTitle {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  color: #fef3c7;
+}
+
+.publicBandText {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  max-width: 420px;
+}
+
+.publicBandBtn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicAlert {
+  margin-bottom: 24px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  background: rgba(249, 115, 22, 0.08);
+}
+
+.publicAlertTitle {
+  display: block;
+  margin-bottom: 8px;
+  color: #fdba74;
+  font-size: 0.95rem;
+}
+
+.publicAlertText {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #fed7aa;
+}
+
+.publicCheckboxRow {
+  margin-top: 8px;
+}
+
+.publicCheckboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.publicCheckbox {
+  margin-top: 3px;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  accent-color: #f5c451;
+}
+
+.publicActionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.publicGhostBtn {
+  background: transparent;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicGhostBtn:hover {
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.btnDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.publicFooter {
+  margin-top: auto;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(51, 65, 85, 0.7);
+  font-size: 0.8rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.publicFooterLink {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.publicFooterLink:hover {
+  color: #f5c451;
+}
+
+.publicFooterDot {
+  opacity: 0.5;
+}
+
+.publicFooterMeta {
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .publicInner {
+    padding: 24px 14px 40px;
+  }
+
+  .publicTopBar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
