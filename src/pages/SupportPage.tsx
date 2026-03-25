@@ -35,8 +35,8 @@ export default function SupportPage() {
               For account-specific issues, include your registered email and a short description of the
               problem (for example: price not updating, chart not loading, or sign-in trouble).
             </p>
-            <a className="publicLink" href="mailto:support@goldcrest.app">
-              support@goldcrest.app
+            <a className="publicLink" href="mailto:goldcrestapp@gmail.com">
+              goldcrestapp@gmail.com
             </a>
             <p className="publicCardMeta">Typical reply time: 1–2 business days</p>
           </article>

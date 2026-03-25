@@ -139,3 +139,48 @@ export async function updateWithdrawalStatus(
     throw new Error(json.message || 'Update failed');
   }
 }
+
+export async function requestAccountDeletion(email: string): Promise<{ message: string }> {
+  const res = await fetch(url('/auth/request-account-deletion'), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email.trim() }),
+  });
+  const json = (await res.json()) as { message?: string };
+  if (!res.ok) {
+    throw new Error(json.message || 'Could not send code');
+  }
+  return { message: json.message || 'If a verified account exists, we sent a code.' };
+}
+
+export async function resendAccountDeletion(email: string): Promise<{ message: string }> {
+  const res = await fetch(url('/auth/resend-account-deletion'), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email.trim() }),
+  });
+  const json = (await res.json()) as { message?: string };
+  if (!res.ok) {
+    throw new Error(json.message || 'Could not resend code');
+  }
+  return { message: json.message || 'OK' };
+}
+
+export async function confirmAccountDeletion(
+  email: string,
+  otp: string,
+): Promise<{ message: string }> {
+  const res = await fetch(url('/auth/confirm-account-deletion'), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: email.trim(),
+      otp: String(otp).replace(/\D/g, '').slice(0, 6),
+    }),
+  });
+  const json = (await res.json()) as { message?: string };
+  if (!res.ok) {
+    throw new Error(json.message || 'Confirmation failed');
+  }
+  return { message: json.message || 'Account deleted.' };
+}
