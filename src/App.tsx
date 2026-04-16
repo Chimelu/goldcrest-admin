@@ -11,14 +11,14 @@ export default function App() {
   return (
     <Routes>
       <Route element={<AdminLayout />}>
-        <Route path="/" element={<Navigate to="/support" replace />} />
+        <Route path="/" element={<Navigate to="/users" replace />} />
         <Route path="/users" element={<UsersPage />} />
         <Route path="/transactions" element={<TransactionsPage />} />
         <Route path="/withdrawals" element={<WithdrawalsPage />} />
       </Route>
       <Route path="/support" element={<SupportPage />} />
       <Route path="/delete-account" element={<DeleteAccountPage />} />
-      <Route path="*" element={<Navigate to="/support" replace />} />
+      <Route path="*" element={<Navigate to="/users" replace />} />
     </Routes>
   );
 }
